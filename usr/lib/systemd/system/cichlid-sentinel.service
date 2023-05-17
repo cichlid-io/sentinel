@@ -1,0 +1,11 @@
+[Unit]
+Description=cichlid sentinel
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/cichlid-sentinel.sh
+Restart=on-success
+
+[Install]
+WantedBy=multi-user.target
